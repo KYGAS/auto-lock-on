@@ -1,0 +1,14 @@
+{
+    "disableAutoUpdate": false,
+	"name": "auto-heal",
+	"author": "teralove/KYGAS",
+	"description": "Auto lockon and instantly heal/cleanse party members.",
+    "version": "108.02",
+	"options": {
+		"niceName": "Auto Heal",
+        "settingsVersion": 1,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"    
+	},
+	"servers": ["https://raw.githubusercontent.com/KYGAS/auto-lock-on/master/"]
+}
