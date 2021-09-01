@@ -179,7 +179,7 @@ module.exports = function AutoHeal(mod) {
                 partyMembers = partyMembers.filter(m => m.playerId != event.playerId);
             });    
             
-            hook('C_START_SKILL', 7, (event) => {
+            hook('C_START_SKILL', 7, { order : Infinity, { filter : fake : null }}, (event) => {
                 if (partyMembers.length == 0) return; // be in a party
                 if (event.skill.id / 10 & 1 != 0) { // is casting (opposed to locking on)
                     playerLocation.w = event.w;
