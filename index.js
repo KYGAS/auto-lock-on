@@ -179,52 +179,53 @@ module.exports = function AutoHeal(mod) {
                 partyMembers = partyMembers.filter(m => m.playerId != event.playerId);
             });    
             
-            hook('C_START_SKILL', 7, { order : Infinity, filter : { fake : null }}, (event) => {
-                if (partyMembers.length == 0) return; // be in a party
-                if (event.skill.id / 10 & 1 != 0) { // is casting (opposed to locking on)
-                    playerLocation.w = event.w;
-                }
-                let skill = Math.floor(event.skill.id / 10000);
-                
-                if(mod.settings.skills[job] && mod.settings.skills[job].includes(skill)) {
-                    if (skill != 9 && !mod.settings.autoHeal) return; // skip heal if disabled
-                    if (skill == 9 && !mod.settings.autoCleanse) return; // skip cleanse if disabled
-                    if (skill == 9 && partyMembers.length > 4) return; // skip cleanse if in a raid
-                    
-                    let targetMembers = [];
-                    let maxTargetCount = getMaxTargets(skill);
-                    
-                    if (skill != 9) sortHp();
-                    for (let i = 0, n = partyMembers.length; i < n; i++) {
-                        if (partyMembers[i].online &&
-                            partyMembers[i].alive &&
-                            partyMembers[i].hpP != undefined &&
-                            partyMembers[i].hpP != 0 &&
-                            ((skill == 9) ? true : partyMembers[i].hpP <= mod.settings.hpCutoff) && // (cleanse) ignore max hp
-                            partyMembers[i].loc != undefined &&
-                            (partyMembers[i].loc.dist3D(playerLocation.loc) / 25) <= mod.settings.maxDistance) {
-                                targetMembers.push(partyMembers[i]);
-                                if (targetMembers.length == maxTargetCount) break;
-                            }
-                    }
+            hook('C_START_SKILL', 7, { order : -Infinity, filter : { fake : false }}, (event) => {
+				mod.setTimeout(()=>{
+					if (partyMembers.length == 0) return; // be in a party
+					if (event.skill.id / 10 & 1 != 0) { // is casting (opposed to locking on)
+						playerLocation.w = event.w;
+					}
+					let skill = Math.floor(event.skill.id / 10000);
+					
+					if(mod.settings.skills[job] && mod.settings.skills[job].includes(skill)) {
+						if (skill != 9 && !mod.settings.autoHeal) return; // skip heal if disabled
+						if (skill == 9 && !mod.settings.autoCleanse) return; // skip cleanse if disabled
+						if (skill == 9 && partyMembers.length > 4) return; // skip cleanse if in a raid
+						
+						let targetMembers = [];
+						let maxTargetCount = getMaxTargets(skill);
+						
+						if (skill != 9) sortHp();
+						for (let i = 0, n = partyMembers.length; i < n; i++) {
+							if (partyMembers[i].online &&
+								partyMembers[i].alive &&
+								partyMembers[i].hpP != undefined &&
+								partyMembers[i].hpP != 0 &&
+								((skill == 9) ? true : partyMembers[i].hpP <= mod.settings.hpCutoff) && // (cleanse) ignore max hp
+								partyMembers[i].loc != undefined &&
+								(partyMembers[i].loc.dist3D(playerLocation.loc) / 25) <= mod.settings.maxDistance) {
+									targetMembers.push(partyMembers[i]);
+									if (targetMembers.length == maxTargetCount) break;
+								}
+						}
 
-                    if (targetMembers.length > 0) {
-                        if (debug) outputDebug(event.skill);
-                        
-                        for (let i = 0, n = targetMembers.length; i < n; i++) {
-                            setTimeout(() => {
-                                mod.send('C_CAN_LOCKON_TARGET', 3, {target: targetMembers[i].gameId, skill: event.skill.id});
-                            }, mod.settings.lockSpeed);
-                        }
-                        
-                        if (mod.settings.autoCast) {
-                            setTimeout(() => {
-                                mod.send('C_START_SKILL', 7, Object.assign({}, event, {w: playerLocation.w, skill: (event.skill.id + 10)}));
-                            }, mod.settings.castSpeed);
-                        }
-                    }
-                }
-                
+						if (targetMembers.length > 0) {
+							if (debug) outputDebug(event.skill);
+							
+							for (let i = 0, n = targetMembers.length; i < n; i++) {
+								setTimeout(() => {
+									mod.send('C_CAN_LOCKON_TARGET', 3, {target: targetMembers[i].gameId, skill: event.skill.id});
+								}, mod.settings.lockSpeed);
+							}
+							
+							if (mod.settings.autoCast) {
+								setTimeout(() => {
+									mod.send('C_START_SKILL', 7, Object.assign({}, event, {w: playerLocation.w, skill: (event.skill.id + 10)}));
+								}, mod.settings.castSpeed);
+							}
+						}
+					}
+                }, 100)
             })
 
             hook('S_CREST_INFO', 2, (event) => {
