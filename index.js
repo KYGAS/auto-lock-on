@@ -190,7 +190,7 @@ module.exports = function AutoHeal(mod) {
 					if(mod.settings.skills[job] && mod.settings.skills[job].includes(skill)) {
 						if (skill != 9 && !mod.settings.autoHeal) return; // skip heal if disabled
 						if (skill == 9 && !mod.settings.autoCleanse) return; // skip cleanse if disabled
-						if (skill == 9 && partyMembers.length > 4) return; // skip cleanse if in a raid
+						//if (skill == 9 && partyMembers.length > 4) return; // skip cleanse if in a raid
 						
 						let targetMembers = [];
 						let maxTargetCount = getMaxTargets(skill);
@@ -225,7 +225,7 @@ module.exports = function AutoHeal(mod) {
 							}
 						}
 					}
-                }, 100)
+                }, 10)
             })
 
             hook('S_CREST_INFO', 2, (event) => {
