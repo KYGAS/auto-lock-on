@@ -17,6 +17,6 @@
         "hpCutoff": 97,
         "maxDistance": 35,
         "lockSpeed": 30,
-        "castSpeed": 100
+        "castSpeed": 50
     }
 }

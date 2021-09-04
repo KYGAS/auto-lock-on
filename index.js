@@ -180,7 +180,6 @@ module.exports = function AutoHeal(mod) {
             });    
             
             hook('C_START_SKILL', 7, { order : -Infinity, filter : { fake : false }}, (event) => {
-				mod.setTimeout(()=>{
 					if (partyMembers.length == 0) return; // be in a party
 					if (event.skill.id / 10 & 1 != 0) { // is casting (opposed to locking on)
 						playerLocation.w = event.w;
@@ -221,11 +220,10 @@ module.exports = function AutoHeal(mod) {
 							if (mod.settings.autoCast) {
 								setTimeout(() => {
 									mod.send('C_START_SKILL', 7, Object.assign({}, event, {w: playerLocation.w, skill: (event.skill.id + 10)}));
-								}, mod.settings.castSpeed);
+								}, Math.max( mod.settings.castSpeed, mod.settings.lockSpeed + 10) );
 							}
 						}
 					}
-                }, 10)
             })
 
             hook('S_CREST_INFO', 2, (event) => {
