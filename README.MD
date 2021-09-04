@@ -10,8 +10,12 @@ Skip lockons and instantly heals/cleanses party members.
 | ------------------------------- |
 | Priest - Focus Heal             |
 | Priest - Healing Immersion      |
+| Priest - Plague			      |
+| Priest - Sleep ( fully soonTM ) |
 | Mystic - Titanic Favor          |
 | Mystic - Arun's Cleansing Touch |
+| Mystic - Volley of Curses		  |
+| Mystic - Contagion			  |
 
 ## Usage
 ### `autoheal [on/off]`
@@ -26,8 +30,19 @@ Skip lockons and instantly heals/cleanses party members.
 ### `autocast [on/off]`
 - Enables/disables auto-casting
 - Default is on
+### `autodebuff [on/off]`
+- Enables/disables auto-debuffing
+- Default is on
 
 ## Issues
 - Skills can ghost if proxy is also using Skill-Prediction (You see animation but nothing happens). Workaround is to disable the skills in SP. [Click here to see how](https://i.imgur.com/bS4VkbX.png)
+- The index file is minified solely to make it difficult for people that are aiming to resell and abuse this module.
+- Anyone that could tell whether the module is malicious to your PC with a clean file could do so with this one as well.
+
+- Credits to:
+-- Teralove ( Original creator )
+-- Myself :fluffykitten:
+-- Catharina ( Inspired me to do this so ppl don't have to use viruses ) <3
+-- Naruchan ( Testing and ideas )
 
 ---

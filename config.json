@@ -1,7 +1,7 @@
 {
-    "version": 1,
+    "version": 2,
     "data": {
-        "skills": {
+        "allySkills": {
             "6": [
                 19,
                 37
@@ -11,12 +11,25 @@
                 9
             ]
         },
+        "enemySkills": {
+            "6": [
+                30,
+                33
+            ],
+            "7": [
+                24,
+                28,
+                41
+            ]
+        },
         "autoCast": true,
         "autoHeal": true,
         "autoCleanse": true,
         "hpCutoff": 97,
         "maxDistance": 35,
         "lockSpeed": 30,
-        "castSpeed": 50
+        "castSpeed": 50,
+        "version": 2,
+        "autoDebuff": true
     }
 }
