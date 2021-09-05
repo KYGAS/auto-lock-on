@@ -55,6 +55,10 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
         switch(to_ver)
         {
 			// keep old settings, add new ones
+			case 3:
+				settings.version = 3;
+				settings.enemySkills = DefaultSettings.enemySkills;
+				break;
 			case 2:
 				settings.version = 2;
 				settings.allySkills = DefaultSettings.allySkills;
