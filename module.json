@@ -1,5 +1,5 @@
 {
-    "disableAutoUpdate": true,
+    "disableAutoUpdate": false,
 	"name": "auto-heal",
 	"author": "KYGAS/teralove",
 	"description": "Auto lockon and instantly heal/cleanse party members.",
