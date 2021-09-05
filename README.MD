@@ -12,6 +12,7 @@ Skip lockons and instantly heals/cleanses party members.
 | Priest - Healing Immersion      |
 | Priest - Plague			      |
 | Priest - Sleep 				  |
+| Priest - Energy Stars			  |
 | Mystic - Titanic Favor          |
 | Mystic - Arun's Cleansing Touch |
 | Mystic - Volley of Curses		  |

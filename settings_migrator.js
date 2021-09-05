@@ -2,21 +2,22 @@
 
 const DefaultSettings = {
      "allySkills": {
-        "6": [ // Priest
+        "6": [  // Priest
             19, // Focus Heal
             37  // Immersion
         ],
-        "7": [ // Mystic
-            5, // Titanic Favor
-            9  // Arun's Cleansing Touch
+        "7": [  // Mystic
+            5,  // Titanic Favor
+            9   // Arun's Cleansing Touch
         ]
     },
 	 "enemySkills": {
-        "6": [ // Priest
+        "6": [  // Priest
 			30, // Plague
-			33  // Sleep
+			33, // Sleep
+			35	// EStars
         ],
-        "7": [ // Mystic
+        "7": [  // Mystic
 			24, // VoC
 			28, // Sleep
 			41 	// Contagion

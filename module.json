@@ -6,7 +6,7 @@
     "version": "109.02",
 	"options": {
 		"niceName": "Auto Heal",
-        "settingsVersion": 2,
+        "settingsVersion": 3,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"    
 	},
