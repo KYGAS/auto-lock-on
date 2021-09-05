@@ -1,10 +1,6 @@
 {
     "files": {
         "README.MD": "03629b4f83f17d328653fc2d8a0a5d2c4a5846668a61f2bb53031dece782258b",
-        "config.json": {
-            "overwrite": false,
-            "hash": "1116b85dcdd656391beaafd65c85eade2a02fb5c74f7912f55505b6b418bc023"
-        },
         "index.js": "111a209a62dcc28a4c93d49ad98cd998ab58a3441d2c7587c443a94bd04e0ed7",
         "module.json": "3e578c3d488ea986eef55df553d2f4f826935b32d5167347f630cabd03515513",
         "settings_migrator.js": "3e9f5e5e92b15634d07bbb8fde5bcf11ba789fd79cfafcffb645e4ac30bf302e"
@@ -28,12 +24,12 @@
         "S_LOGOUT_PARTY_MEMBER": 1,
         "S_NPC_LOCATION": 3,
         "S_PARTY_MEMBER_CHANGE_HP": 4,
-        "S_PARTY_MEMBER_LIST": [7,9],
-        "S_PARTY_MEMBER_STAT_UPDATE": [3,4],
+        "S_PARTY_MEMBER_LIST": 9,
+        "S_PARTY_MEMBER_STAT_UPDATE": 4,
         "S_SPAWN_ME": 3,
         "S_SPAWN_NPC": 12,
-        "S_SPAWN_USER": [15,17],
-        "S_USER_LOCATION": [5,6],
+        "S_SPAWN_USER": 17,
+        "S_USER_LOCATION": 6,
         "S_USER_LOCATION_IN_ACTION": 2
     }
 }
