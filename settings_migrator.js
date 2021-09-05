@@ -52,15 +52,14 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
         // If we reach this point it's guaranteed that from_ver === to_ver - 1, so we can implement
         // a switch for each version step that upgrades to the next version. This enables us to
         // upgrade from any version to the latest version without additional effort!
+		
         switch(to_ver)
         {
 			// keep old settings, add new ones
 			case 3:
-				settings.version = 3;
-				settings.enemySkills = DefaultSettings.enemySkills;
+				settings.enemySkills[6].push(35);
 				break;
 			case 2:
-				settings.version = 2;
 				settings.allySkills = DefaultSettings.allySkills;
 				settings.enemySkills = DefaultSettings.enemySkills;
 				settings.autoDebuff = DefaultSettings.autoDebuff;
