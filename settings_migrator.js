@@ -57,12 +57,15 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
         {
 			// keep old settings, add new ones
 			case 3:
+				if(!settings.enemySkills[6]) setting.enemySkills[6] = [];
 				settings.enemySkills[6].push(35);
+				
 				break;
 			case 2:
 				settings.allySkills = DefaultSettings.allySkills;
 				settings.enemySkills = DefaultSettings.enemySkills;
 				settings.autoDebuff = DefaultSettings.autoDebuff;
+				
 				break;
 			default:
 				let oldsettings = settings

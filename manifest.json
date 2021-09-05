@@ -1,32 +1,39 @@
 {
-  "files": {
-    "config.json": {
-        "overwrite": false,
-        "hash": "0FBA4A59D44F52963EB1CD6B9AE2875B23F7962BEA7822EEBBC41E6D1D1C4856"
+    "files": {
+        "README.MD": "03629b4f83f17d328653fc2d8a0a5d2c4a5846668a61f2bb53031dece782258b",
+        "config.json": {
+            "overwrite": false,
+            "hash": "1116b85dcdd656391beaafd65c85eade2a02fb5c74f7912f55505b6b418bc023"
+        },
+        "index.js": "111a209a62dcc28a4c93d49ad98cd998ab58a3441d2c7587c443a94bd04e0ed7",
+        "module.json": "3e578c3d488ea986eef55df553d2f4f826935b32d5167347f630cabd03515513",
+        "settings_migrator.js": "3e9f5e5e92b15634d07bbb8fde5bcf11ba789fd79cfafcffb645e4ac30bf302e"
     },
-    "index.js": "111A209A62DCC28A4C93D49AD98CD998AB58A3441D2C7587C443A94BD04E0ED7",
-    "module.json": "1A91D7320B7178F1EF3861355AFDBECEFE988494BF501970A5DF8CBC5F2D0B47",
-    "settings_migrator.js": "77B90B1E89D206DA06D8B1C52CEEDCC8FF7936C27169A63923A5B0D1FBCF6AE0",
-	"README.MD" : "03629B4F83F17D328653FC2D8A0A5D2C4A5846668A61F2BB53031DECE782258B"
-  },
-  "defs": {
-    "C_CAN_LOCKON_TARGET": 3,
-    "C_PLAYER_LOCATION": 5,
-    "C_START_SKILL": 7,
-    "S_BAN_PARTY_MEMBER": 1,
-    "S_CREST_APPLY": 2,
-    "S_CREST_INFO": 2,
-    "S_DEAD_LOCATION": 2,
-    "S_INSTANT_DASH": 3,
-    "S_LEAVE_PARTY": 1,
-    "S_LEAVE_PARTY_MEMBER": 2,
-    "S_LOGOUT_PARTY_MEMBER": 1,
-    "S_PARTY_MEMBER_CHANGE_HP": 4,    
-    "S_PARTY_MEMBER_LIST": 7,
-    "S_PARTY_MEMBER_STAT_UPDATE": 3,    
-    "S_SPAWN_ME": 3,
-    "S_SPAWN_USER": 15,
-    "S_USER_LOCATION": 5,
-    "S_USER_LOCATION_IN_ACTION": 2
-  }
+    "defs": {
+        "C_CAN_LOCKON_TARGET": 3,
+        "C_PLAYER_LOCATION": 5,
+        "C_START_SKILL": 7,
+        "S_ABNORMALITY_BEGIN": 5,
+        "S_ABNORMALITY_END": 1,
+        "S_BAN_PARTY_MEMBER": 1,
+        "S_BOSS_GAGE_INFO": 3,
+        "S_CREST_APPLY": 2,
+        "S_CREST_INFO": 2,
+        "S_DEAD_LOCATION": 2,
+        "S_DESPAWN_NPC": 3,
+        "S_INSTANT_DASH": 3,
+        "S_LEAVE_PARTY": 1,
+        "S_LEAVE_PARTY_MEMBER": 2,
+        "S_LOAD_TOPO": "event",
+        "S_LOGOUT_PARTY_MEMBER": 1,
+        "S_NPC_LOCATION": 3,
+        "S_PARTY_MEMBER_CHANGE_HP": 4,
+        "S_PARTY_MEMBER_LIST": [7,9],
+        "S_PARTY_MEMBER_STAT_UPDATE": [3,4],
+        "S_SPAWN_ME": 3,
+        "S_SPAWN_NPC": 12,
+        "S_SPAWN_USER": [15,17],
+        "S_USER_LOCATION": [5,6],
+        "S_USER_LOCATION_IN_ACTION": 2
+    }
 }
