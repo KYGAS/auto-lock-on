@@ -32,8 +32,15 @@ Skip lockons and instantly heals/cleanses party members.
 ### `autocast [on/off]`
 - Enables/disables auto-casting
 - Default is on
+### `autopriest [/FH/HI/Sleep/Plague/ES]`
+- Enables/disables Focus Heal/Healing Immersion/Sleep/Plague/Energy Stars
+- Default is on
+### `automystic [/TF/ACT/Sleep/Cont/VoC/ToW]`
+- Enables/disables Titanic Favor/Arun's Cleansing Touch/Sleep/Contagion/Thrall of Wrath
+- Default is on
+- Supports ani canceling Thrall of Wrath attacks ~Experimental~
 
 ## Issues
-- Skills can ghost if proxy is also using Skill-Prediction (You see animation but nothing happens). Workaround is to disable the skills in SP. [Click here to see how](https://i.imgur.com/bS4VkbX.png)
+- Skills can ghost if proxy is also using Skill-Prediction (You see animation but nothing happens). Workaround is to disable the skills in SP. [Click here to see how](https://i.imgur.com/bS4VkbX.png) ( Should be fixed )
 
 ---

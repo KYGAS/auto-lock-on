@@ -1,12 +1,12 @@
 {
-    "disableAutoUpdate": false,
+    "disableAutoUpdate": true,
     "name": "auto-heal",
     "author": "KYGAS/teralove",
     "description": "Auto lockon and instantly heal/cleanse party members.",
     "version": "109.02",
     "options": {
         "niceName": "Auto Heal",
-        "settingsVersion": 3,
+        "settingsVersion": 4,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },
