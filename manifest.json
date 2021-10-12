@@ -1,8 +1,10 @@
 {
     "files": {
         "README.MD": "12bb204d7d311f5ef52b320771074d47aead25576178225377847638243bc12a",
-        "index.js": "266fde3a869bc0262430630b795715be93f03e3887a7c4abb2f533539cf9238f",
-        "module.json": "65F8E374BE721DA88FAAED109422F69F1673729265045FD81CB5E41F169F9AC6",
+        "config.json": "6e9e48b12635f81d6813da161bdb130c3b387413207828f0d4887ca1e0211d19",
+        "index.js": "0870e2c37be9f2cd1302953f7a79b03ba08960c5ae320f4ade5d6661106922f2",
+        "module.config.json": "fccfa1f9e19b11a6d58abbc07369f696ed9ea3873e263f6a2adf8e04d672d4d4",
+        "module.json": "65f8e374be721da88faaed109422f69f1673729265045fd81cb5e41f169f9ac6",
         "settings_migrator.js": "30744de6fbed557b6829137ef8cd6682de8a2de3323e8cfd3a09346fc68edf83"
     },
     "defs": {
@@ -11,6 +13,7 @@
         "C_START_SKILL": 7,
         "S_ABNORMALITY_BEGIN": 5,
         "S_ABNORMALITY_END": 1,
+        "S_ACTION_END": 5,
         "S_ACTION_STAGE": 9,
         "S_BAN_PARTY_MEMBER": 1,
         "S_BOSS_GAGE_INFO": 3,
